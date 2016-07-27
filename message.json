@@ -1,0 +1,26 @@
+{
+  "from": "{HOSTNAME1}",
+  // 从哪个服务器来
+  "to": "user",
+  // 送给哪个用户
+  "data": {
+    "time": "{EVENT.DATE} {EVENT.TIME}",
+    // 时间
+    "level": "{TRIGGER.SEVERITY}",
+    // 告警级别
+    "name": "{TRIGGER.NAME}",
+    // 触发器名称
+    "key": "{TRIGGER.KEY1}",
+    // 告警项目
+    "value": "{ITEM.VALUE}",
+    // 问题详情
+    "now": "{TRIGGER.STATUS}:{ITEM.VALUE1}",
+    // 当前状态
+    "id": "{EVENT.ID}",
+    // 事件id
+    "msg_type": "1|2|3",
+    // 消息类型（普通|故障|恢复）
+    "ip":"{HOST.IP}"
+    // 发生告警的这台设备ip地址
+  }
+}
